@@ -2,8 +2,6 @@
 
 namespace XeroPHP\Models\Accounting;
 
-use XeroPHP\Models\Accounting\CreditNote\Allocation;
-use XeroPHP\Models\Accounting\Invoice\LineItem;
 use XeroPHP\Remote;
 use XeroPHP\Traits\AttachmentTrait;
 use XeroPHP\Models\Accounting\LineItem;
