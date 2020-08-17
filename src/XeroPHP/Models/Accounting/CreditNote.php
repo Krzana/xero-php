@@ -635,9 +635,11 @@ class CreditNote extends Remote\Model
      */
     public function getAllocations()
     {
-        return array_merge(
-            isset($this->_data['Allocations']) ? $this->_data['Allocations']->getArrayCopy(): [],
-            isset($this->_data['New_Allocations']) ? $this->_data['New_Allocations']->getArrayCopy(): []
+        return new Remote\Collection(
+            array_merge(
+                isset($this->_data['Allocations']) ? $this->_data['Allocations']->getArrayCopy(): [],
+                isset($this->_data['New_Allocations']) ? $this->_data['New_Allocations']->getArrayCopy(): []
+            )
         );
     }
 
